@@ -1,33 +1,33 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: classifi-cat-or
+  name: classifi-cat-ion
   namespace: dhge
 spec:
   ports:
   - port: 5000
   selector:
-    app: classifi-cat-or
+    app: classifi-cat-ion
 
 ---
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: classifi-cat-or
+  name: classifi-cat-ion
   namespace: dhge
 spec:
   selector:
     matchLabels:
-      app: classifi-cat-or
+      app: classifi-cat-ion
   template:
     metadata:
       labels:
-        app: classifi-cat-or
+        app: classifi-cat-ion
     spec:
       containers:
-      - image: gewuerznud3l/classifi-cat-or:latest
-        name: classifi-cat-or
+      - image: gewuerznud3l/classifi-cat-ion:latest
+        name: classifi-cat-ion
         imagePullPolicy: Always
       topologySpreadConstraints:
       - maxSkew: 1
