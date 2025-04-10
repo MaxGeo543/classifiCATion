@@ -1,13 +1,11 @@
 # 🐱 classifiCATion
 This is a simple Flask-based web API that predicts the likelihood an uploaded image contains a cat using a pre-trained MobileNetV2 model from TensorFlow/Keras.
 
----
 ## 🚀 Features
 - Accepts image uploads via POST requests.
 - Uses a deep learning model to classify whether the image contains a cat.
 - Returns the probability and a boolean result.
 
----
 ## 📦 Installation
 ### 1. Clone the Repository
 ```
@@ -25,7 +23,6 @@ Ensure you have `pip` updated, then run:
 pip install -r requirements.txt
 ```
 
----
 ## 🛠️ Running the App
 Make sure you're in the root directory and then simply run: 
 ```
@@ -33,7 +30,6 @@ python app.py
 ```
 This will start the Flask app locally on `http://0.0.0.0:5000`.
 
----
 ## 📤 Using the API
 You can test the API using `curl` or any HTTP client like Postman.
 ### Endpoint
@@ -53,14 +49,12 @@ curl -X POST http://localhost:5000/predict \
 }
 ```
 
----
 ## 🧪 Running from Command Line (Optional)
 You can also use the `main.py` script directly to classify an image:
 ```
 python main.py path_to_your_image.jpg
 ```
 
----
 ## 🧠 How it Works
 1. Flask receives an image file.
 2. It's saved temporarily.
