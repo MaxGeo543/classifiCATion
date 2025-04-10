@@ -1,5 +1,7 @@
-# Use an official lightweight Python image
-FROM python:3.9-slim
+# Use image based on target platform
+FROM --platform=linux/arm64 arm64v8/python:3.12-slim AS build-arm64
+FROM --platform=linux/amd64 python:3.12-slim AS build-amd64
+FROM build-$TARGETARCH
 
 # Set the working directory inside the container
 WORKDIR /app
